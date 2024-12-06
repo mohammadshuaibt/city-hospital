@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <meta charset="utf-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet"
+      href=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css ">
+    <link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+      
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+    {% block cssblockk %}{% endblock cssblockk %}
+  </head>
+
+  <body>
+
+    <nav class="navbar bg-primary navbar-expand-md ">
+      <div class="container">
+        <div class="col-2 text-left pl-md-0">
+          <h3 class="text-white"> City Hospital </h3>
+        </div>
+       
+       <div
+          class="collapse navbar-collapse justify-content-center col-md-8 navbar-collapse-3">
+          <ul class="navbar-nav justify-content-center  fw-bold">
+            <li class="nav-item active">
+              <a id="linksed" class="nav-link text-white" href="{% url 'index'%}">Home </a>
+            </li>
+            <li class="nav-item">
+              <a id="linksed" class="nav-link text-white" href="{% url 'about'%}">About</a>
+            </li>
+            <li class="nav-item">
+              <a id="linksed" class="nav-link text-white" href="{% url 'booking'%}">Booking</a>
+            </li>
+            <li class="nav-item">
+              <a id="linksed" class="nav-link text-white" href="{% url 'doctors'%}">Doctors</a>
+            </li>
+<li class="nav-item">
+              <a id="linksed" class="nav-link text-white" href="{% url 'department'%}">Departments</a>
+            </li>
+            <li class="nav-item">
+              <a id="linksed" class="nav-link text-white" href="{% url 'contact'%}">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+       
+      </div>
+    </nav>
+
+
+
+    {% block content%}
+    {% endblock content%}
+{% block carousal %}
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="{% static 'images/car1.jpg'%}" class="d-block w-100" alt="...">
+        
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="{% static 'images/car2.jpg'%}" class="d-block w-100" alt="...">
+        
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/car3.jpg'%}" class="d-block w-100" alt="...">
+        
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div style="width:900px; margin-top: 20px; margin-left: 300px; font-weight: 500">
+    <h4 style="text-align:center; font-weight:350">Centre For Excellence</h2>
+  <p style="text-align:center; ">
+    City Hospital is a premier healthcare institution dedicated to providing exceptional medical care and services to the community. With state-of-the-art facilities, highly skilled medical professionals, and a patient-centric approach, we are committed to ensuring the well-being of every individual who walks through our doors.
+
+We offer a comprehensive range of services, including general medicine, specialized treatments, advanced diagnostics, and round-the-clock emergency care. Our mission is to combine medical excellence with compassionate care, fostering a healing environment where patients feel safe, respected, and valued.
+
+At City Hospital, your health is our priority, and we strive to deliver world-class care tailored to your needs, making us a trusted name in the healthcare industry.
+  </p>
+</div>
+{% endblock carousal %}
+
+
+
+    
+
+    {% block depinfo %}{% endblock depinfo %}
+
+    {% block footer %}
+    <footer>
+      <div style="background-color: #ff6c36; width: 100%; height: 500px;margin-top: 100px; display: flex;justify-content: space-around;">
+   
+        <div class="container" style="width: 500px; margin-left: 100px; padding-top: 100px;">
+     
+          <h3 style="color: white;font-size: 30px; font-weight: 800;">City Hospital<img src="{% static 'images/sss.png' %}" alt="Avatar Logo" style="width:50px; margin: 12px;" class="rounded-pill"> </h3>
+     
+          <p style="color: white; width: 400px;">City Hospital is a modern, state-of-the-art healthcare facility dedicated to providing high-quality medical care to the community. Located in the heart of the city, it offers a wide range of medical services, from
+       emergency care to specialized treatments. The hospital features advanced diagnostic equipment, cutting-edge technology, and a team of highly skilled healthcare professionals, including doctors, nurses, and support staff.</p>
+     
+          <button type="button" class="btn btn-outline-light m-2">Read More</button>
+     
+        </div>
+     
+        <div class="col-md-6"  style="width: 500px; margin-left: 100px; padding-top: 100px;">
+     
+          <h3 style="color: white;font-size: 30px; font-weight: 500;">More Info</h3>
+     
+          <p style="color: white; width: 400px; cursor: pointer; padding-top: 30px;font-weight: bold;">-City Hospital Nutsing College</p><br>
+     
+          <p style="color: white; width: 400px; cursor: pointer;font-weight: bold;" >-CH Group</p><br>
+     
+          <p style="color: white; width: 400px; cursor: pointer;font-weight: bold;">-Our Accreditations</p><br>
+     
+          <p style="color: white; width: 400px; cursor: pointer;font-weight: bold;">-Insurence partners</p>
+     
+          <ul class="social-icons list-unstyled mb-0" style="padding: 10px;">
+     
+            <li class="fab fa-facebook p-2" style="cursor: pointer; color: white; font-size: 20px;"></li>
+     
+            <li class="fab fa-instagram p-2"style="cursor: pointer;  color: white; font-size: 20px;"></li>
+     
+            <li class="fab fa-youtube p-2"style="cursor: pointer;  color: white; font-size: 20px;"></li>
+     
+            <li class="fab fa-linkedin-in p-2"style="cursor: pointer;  color: white; font-size: 20px;"></li>
+     
+          </ul>
+     
+        </div>
+     
+      </div></footer>
+    {% endblock footer %}
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="{% static "js/script.js" %}"></script>
+
+  </body>
+
+</html>

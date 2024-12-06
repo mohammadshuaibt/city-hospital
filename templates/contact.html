@@ -1,0 +1,72 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<img src="{% static "images/contact_image.jpg" %}" style="width: 100%; height:300px" alt="">
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 20px;">
+  <!-- Get In Touch Block -->
+  <div class="col-md-6" style="padding-top: 30px; padding-left: 30px;">
+    <h1 style="font-size: 50px; color: #F15A22; font-weight: 800; margin-bottom: 15px;">Get In Touch With Us</h1>
+    <p>If you can't find an answer to your questions, please don't hesitate to <br>contact us.
+      <br> <br>
+      <strong style="font-size: 18px; font-weight: 500; color: #005BAA;">City Hospital</strong><br>
+      Indira Gandhi Road, Kozhikode - 673004 Kerala, India</p>
+    <br>
+    <p class="title" style="color: #F15A22;"><b><u>PHONE</u></b></p>
+    <P><i class="fa fa-phone"> : +91-495-2723272, +91-495-3535353</i></P>
+    <P><i class="fa fa-phone"> : +91-495-2777777</i></P>
+
+    <p class="title" style="color: #F15A22;"><b><u>EMAIL</u></b></p>
+    <P><i class="fa fa-envelope"> : cityhospital@gmail.com</i></P>
+
+    <p class="title" style="color: #F15A22;"><b><u>LOCATION</u></b></p>
+    <P><i class="fa fa-map-marker"> : Mavoor Road, Calicut, Kerala, India, 560-335</i></P>
+  </div>
+
+  <!-- Form Block -->
+  <div class="col-md-6" style="padding: 30px;">
+    <h1 style="text-align: center;">Contact Us</h1>
+    <p style="text-align: center;">Fill out the form details given below to connect with our CITY Hospital <br> for general enquiry, suggestions, feedback and more</p>
+    <form method="POST" style="margin-top: 20px;">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="">First Name</label>
+        <input type="text" name="first_name" placeholder="Enter First Name" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="">Last Name</label>
+        <input type="text" name="last_name" placeholder="Enter Last Name" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="">Email Address</label>
+        <input type="email" name="email_address" placeholder="Enter Email Address" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="">Phone Number</label>
+        <input type="text" name="phone_number" placeholder="Enter Phone Number" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary" style="display: block; margin: 20px auto;">Send</button>
+    </form>
+  </div>
+</div>
+{% endblock content %}
+
+{% block carousal %}{% endblock carousal %}
+
+{% block footer %}
+<footer class="pt-2 pb-2 bg-primary text-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-8">
+        <h4>Emergency Contact Number: 0123456789</h4>
+      </div>
+      <div class="col-12 col-md-4 mt-4 mt-md-0 text-center text-md-end">
+        © 2022 City Hospital. All Rights Reserved
+      </div>
+    </div>
+  </div>
+</footer>
+{% endblock footer %}

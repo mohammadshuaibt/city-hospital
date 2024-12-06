@@ -1,0 +1,24 @@
+{% extends 'index.html'%}
+
+
+{% block content%}
+    <h1>Departments</h1>
+{% endblock%}
+
+{% block depinfo %}
+<div class='row'>
+    {% for deptt in department_info %}
+        <div class='col-sm-6 col-md-4 col-lg-3 mb-4'> <!-- Responsive layout with different card counts per screen size -->
+            <div class="card h-100 m-4">
+                <img src="{{deptt.dep_image.url}}" class="card-img-top" alt="dep image">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Department name: {{deptt.dept_name}}</h4>
+                    <p class="card-text">Department description: {{deptt.dep_description}}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock depinfo %}
+
+{% block carousal %}{% endblock carousal %}
